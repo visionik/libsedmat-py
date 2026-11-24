@@ -87,6 +87,23 @@ Implement the `libsedmat.Backend` `Protocol` (`project`, `apply_text_plan`, `app
 - Honor `BraceExpression.no_reset` (`{!0}`) for additive formatting vs. implicit reset default.
 - Conformance suite: `testdata/conformance/v3.6.json` (shared across Go, TS, Rust, Python, and C++).
 
+## Examples
+
+All examples have **zero external dependencies** (Python 3.10+ stdlib only):
+
+- **[`examples/lsp_server.py`](./examples/lsp_server.py)** — SEDMAT Language Server (LSP over stdio) with live diagnostics, profile-aware completions + color swatches, signature help, and semantic tokens:
+  ```bash
+  PYTHONPATH=src python3 examples/lsp_server.py
+  ```
+- **[`examples/doc_playground.py`](./examples/doc_playground.py)** — Launch-a-web Document Playground (`http://127.0.0.1:4173`) with live syntax highlighting, IntelliSense dropdown, color swatches, ghost text, dry-run preview, and numbered document view:
+  ```bash
+  PYTHONPATH=src python3 examples/doc_playground.py
+  ```
+- **[`examples/slide_deck.py`](./examples/slide_deck.py)** — Launch-a-web Slide Deck Studio (`http://127.0.0.1:4174`) demonstrating SEDMAT v3.7 `@` container scopes and Slides profile completions:
+  ```bash
+  PYTHONPATH=src python3 examples/slide_deck.py
+  ```
+
 ## Development
 
 ```bash
